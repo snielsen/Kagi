@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C756B032214FE7200DFB2F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C756B022214FE7200DFB2F2 /* main.m */; };
+		6CEF3AED22150C2600CEAC8A /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AD522150C0F00CEAC8A /* GCDWebServerResponse.m */; };
+		6CEF3AEE22150C2600CEAC8A /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AD822150C0F00CEAC8A /* GCDWebServerErrorResponse.m */; };
+		6CEF3AEF22150C2600CEAC8A /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3ADD22150C0F00CEAC8A /* GCDWebServerRequest.m */; };
+		6CEF3AF022150C2600CEAC8A /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3ADE22150C0F00CEAC8A /* GCDWebServerURLEncodedFormRequest.m */; };
+		6CEF3AF122150C2600CEAC8A /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE022150C0F00CEAC8A /* GCDWebServerMultiPartFormRequest.m */; };
+		6CEF3AF222150C2600CEAC8A /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE222150C0F00CEAC8A /* GCDWebServerDataRequest.m */; };
+		6CEF3AF322150C2600CEAC8A /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE322150C0F00CEAC8A /* GCDWebServerFileResponse.m */; };
+		6CEF3AF422150C2600CEAC8A /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE422150C0F00CEAC8A /* GCDWebServerFunctions.m */; };
+		6CEF3AF522150C2600CEAC8A /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE522150C0F00CEAC8A /* GCDWebServer.m */; };
+		6CEF3AF622150C2600CEAC8A /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE622150C0F00CEAC8A /* GCDWebServerDataResponse.m */; };
+		6CEF3AF722150C2600CEAC8A /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE722150C0F00CEAC8A /* GCDWebServerConnection.m */; };
+		6CEF3AF822150C2600CEAC8A /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE822150C0F00CEAC8A /* GCDWebServerFileRequest.m */; };
+		6CEF3AF922150C2600CEAC8A /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AEA22150C0F00CEAC8A /* GCDWebServerStreamedResponse.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6C756AFD2214FE7200DFB2F2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6C756AFF2214FE7200DFB2F2 /* Kagi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Kagi; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C756B022214FE7200DFB2F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6C756B092214FFEA00DFB2F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CEF3AD122150C0F00CEAC8A /* GCDWebServerFileResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerFileResponse.h; sourceTree = "<group>"; };
+		6CEF3AD222150C0F00CEAC8A /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerFunctions.h; sourceTree = "<group>"; };
+		6CEF3AD322150C0F00CEAC8A /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerPrivate.h; sourceTree = "<group>"; };
+		6CEF3AD422150C0F00CEAC8A /* GCDWebServerDataRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerDataRequest.h; sourceTree = "<group>"; };
+		6CEF3AD522150C0F00CEAC8A /* GCDWebServerResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerResponse.m; sourceTree = "<group>"; };
+		6CEF3AD622150C0F00CEAC8A /* GCDWebServerMultiPartFormRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerMultiPartFormRequest.h; sourceTree = "<group>"; };
+		6CEF3AD722150C0F00CEAC8A /* GCDWebServerStreamedResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerStreamedResponse.h; sourceTree = "<group>"; };
+		6CEF3AD822150C0F00CEAC8A /* GCDWebServerErrorResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerErrorResponse.m; sourceTree = "<group>"; };
+		6CEF3AD922150C0F00CEAC8A /* GCDWebServerFileRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerFileRequest.h; sourceTree = "<group>"; };
+		6CEF3ADA22150C0F00CEAC8A /* GCDWebServerConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerConnection.h; sourceTree = "<group>"; };
+		6CEF3ADB22150C0F00CEAC8A /* GCDWebServerDataResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerDataResponse.h; sourceTree = "<group>"; };
+		6CEF3ADC22150C0F00CEAC8A /* GCDWebServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServer.h; sourceTree = "<group>"; };
+		6CEF3ADD22150C0F00CEAC8A /* GCDWebServerRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerRequest.m; sourceTree = "<group>"; };
+		6CEF3ADE22150C0F00CEAC8A /* GCDWebServerURLEncodedFormRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerURLEncodedFormRequest.m; sourceTree = "<group>"; };
+		6CEF3ADF22150C0F00CEAC8A /* GCDWebServerHTTPStatusCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerHTTPStatusCodes.h; sourceTree = "<group>"; };
+		6CEF3AE022150C0F00CEAC8A /* GCDWebServerMultiPartFormRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerMultiPartFormRequest.m; sourceTree = "<group>"; };
+		6CEF3AE122150C0F00CEAC8A /* GCDWebServerResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerResponse.h; sourceTree = "<group>"; };
+		6CEF3AE222150C0F00CEAC8A /* GCDWebServerDataRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerDataRequest.m; sourceTree = "<group>"; };
+		6CEF3AE322150C0F00CEAC8A /* GCDWebServerFileResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerFileResponse.m; sourceTree = "<group>"; };
+		6CEF3AE422150C0F00CEAC8A /* GCDWebServerFunctions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerFunctions.m; sourceTree = "<group>"; };
+		6CEF3AE522150C0F00CEAC8A /* GCDWebServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServer.m; sourceTree = "<group>"; };
+		6CEF3AE622150C0F00CEAC8A /* GCDWebServerDataResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerDataResponse.m; sourceTree = "<group>"; };
+		6CEF3AE722150C0F00CEAC8A /* GCDWebServerConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerConnection.m; sourceTree = "<group>"; };
+		6CEF3AE822150C0F00CEAC8A /* GCDWebServerFileRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerFileRequest.m; sourceTree = "<group>"; };
+		6CEF3AE922150C0F00CEAC8A /* GCDWebServerErrorResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerErrorResponse.h; sourceTree = "<group>"; };
+		6CEF3AEA22150C0F00CEAC8A /* GCDWebServerStreamedResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWebServerStreamedResponse.m; sourceTree = "<group>"; };
+		6CEF3AEB22150C0F00CEAC8A /* GCDWebServerURLEncodedFormRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerURLEncodedFormRequest.h; sourceTree = "<group>"; };
+		6CEF3AEC22150C0F00CEAC8A /* GCDWebServerRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerRequest.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6C756AFC2214FE7200DFB2F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C756AF62214FE7200DFB2F2 = {
+			isa = PBXGroup;
+			children = (
+				6CEF3AD022150C0F00CEAC8A /* GCDWebServer */,
+				6C756B012214FE7200DFB2F2 /* Kagi */,
+				6C756B002214FE7200DFB2F2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C756B002214FE7200DFB2F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C756AFF2214FE7200DFB2F2 /* Kagi */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C756B012214FE7200DFB2F2 /* Kagi */ = {
+			isa = PBXGroup;
+			children = (
+				6C756B092214FFEA00DFB2F2 /* Info.plist */,
+				6C756B022214FE7200DFB2F2 /* main.m */,
+			);
+			path = Kagi;
+			sourceTree = "<group>";
+		};
+		6CEF3AD022150C0F00CEAC8A /* GCDWebServer */ = {
+			isa = PBXGroup;
+			children = (
+				6CEF3AD122150C0F00CEAC8A /* GCDWebServerFileResponse.h */,
+				6CEF3AD222150C0F00CEAC8A /* GCDWebServerFunctions.h */,
+				6CEF3AD322150C0F00CEAC8A /* GCDWebServerPrivate.h */,
+				6CEF3AD422150C0F00CEAC8A /* GCDWebServerDataRequest.h */,
+				6CEF3AD522150C0F00CEAC8A /* GCDWebServerResponse.m */,
+				6CEF3AD622150C0F00CEAC8A /* GCDWebServerMultiPartFormRequest.h */,
+				6CEF3AD722150C0F00CEAC8A /* GCDWebServerStreamedResponse.h */,
+				6CEF3AD822150C0F00CEAC8A /* GCDWebServerErrorResponse.m */,
+				6CEF3AD922150C0F00CEAC8A /* GCDWebServerFileRequest.h */,
+				6CEF3ADA22150C0F00CEAC8A /* GCDWebServerConnection.h */,
+				6CEF3ADB22150C0F00CEAC8A /* GCDWebServerDataResponse.h */,
+				6CEF3ADC22150C0F00CEAC8A /* GCDWebServer.h */,
+				6CEF3ADD22150C0F00CEAC8A /* GCDWebServerRequest.m */,
+				6CEF3ADE22150C0F00CEAC8A /* GCDWebServerURLEncodedFormRequest.m */,
+				6CEF3ADF22150C0F00CEAC8A /* GCDWebServerHTTPStatusCodes.h */,
+				6CEF3AE022150C0F00CEAC8A /* GCDWebServerMultiPartFormRequest.m */,
+				6CEF3AE122150C0F00CEAC8A /* GCDWebServerResponse.h */,
+				6CEF3AE222150C0F00CEAC8A /* GCDWebServerDataRequest.m */,
+				6CEF3AE322150C0F00CEAC8A /* GCDWebServerFileResponse.m */,
+				6CEF3AE422150C0F00CEAC8A /* GCDWebServerFunctions.m */,
+				6CEF3AE522150C0F00CEAC8A /* GCDWebServer.m */,
+				6CEF3AE622150C0F00CEAC8A /* GCDWebServerDataResponse.m */,
+				6CEF3AE722150C0F00CEAC8A /* GCDWebServerConnection.m */,
+				6CEF3AE822150C0F00CEAC8A /* GCDWebServerFileRequest.m */,
+				6CEF3AE922150C0F00CEAC8A /* GCDWebServerErrorResponse.h */,
+				6CEF3AEA22150C0F00CEAC8A /* GCDWebServerStreamedResponse.m */,
+				6CEF3AEB22150C0F00CEAC8A /* GCDWebServerURLEncodedFormRequest.h */,
+				6CEF3AEC22150C0F00CEAC8A /* GCDWebServerRequest.h */,
+			);
+			name = GCDWebServer;
+			path = Kagi/GCDWebServer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C756AFE2214FE7200DFB2F2 /* Kagi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C756B062214FE7200DFB2F2 /* Build configuration list for PBXNativeTarget "Kagi" */;
+			buildPhases = (
+				6C756AFB2214FE7200DFB2F2 /* Sources */,
+				6C756AFC2214FE7200DFB2F2 /* Frameworks */,
+				6C756AFD2214FE7200DFB2F2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kagi;
+			productName = Kagi;
+			productReference = 6C756AFF2214FE7200DFB2F2 /* Kagi */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6C756AF72214FE7200DFB2F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Aoren Software";
+				TargetAttributes = {
+					6C756AFE2214FE7200DFB2F2 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 6C756AFA2214FE7200DFB2F2 /* Build configuration list for PBXProject "Kagi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6C756AF62214FE7200DFB2F2;
+			productRefGroup = 6C756B002214FE7200DFB2F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6C756AFE2214FE7200DFB2F2 /* Kagi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6C756AFB2214FE7200DFB2F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CEF3AF622150C2600CEAC8A /* GCDWebServerDataResponse.m in Sources */,
+				6CEF3AF222150C2600CEAC8A /* GCDWebServerDataRequest.m in Sources */,
+				6CEF3AF722150C2600CEAC8A /* GCDWebServerConnection.m in Sources */,
+				6CEF3AEF22150C2600CEAC8A /* GCDWebServerRequest.m in Sources */,
+				6CEF3AF922150C2600CEAC8A /* GCDWebServerStreamedResponse.m in Sources */,
+				6CEF3AF122150C2600CEAC8A /* GCDWebServerMultiPartFormRequest.m in Sources */,
+				6CEF3AEE22150C2600CEAC8A /* GCDWebServerErrorResponse.m in Sources */,
+				6CEF3AF022150C2600CEAC8A /* GCDWebServerURLEncodedFormRequest.m in Sources */,
+				6CEF3AF422150C2600CEAC8A /* GCDWebServerFunctions.m in Sources */,
+				6CEF3AED22150C2600CEAC8A /* GCDWebServerResponse.m in Sources */,
+				6CEF3AF522150C2600CEAC8A /* GCDWebServer.m in Sources */,
+				6CEF3AF322150C2600CEAC8A /* GCDWebServerFileResponse.m in Sources */,
+				6CEF3AF822150C2600CEAC8A /* GCDWebServerFileRequest.m in Sources */,
+				6C756B032214FE7200DFB2F2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6C756B042214FE7200DFB2F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6C756B052214FE7200DFB2F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6C756B072214FE7200DFB2F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEVELOPMENT_TEAM = W5PNVD5YEB;
+				INFOPLIST_FILE = "$(SRCROOT)/Kagi/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = Kagi/GCDWebServer;
+			};
+			name = Debug;
+		};
+		6C756B082214FE7200DFB2F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEVELOPMENT_TEAM = W5PNVD5YEB;
+				INFOPLIST_FILE = "$(SRCROOT)/Kagi/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = Kagi/GCDWebServer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C756AFA2214FE7200DFB2F2 /* Build configuration list for PBXProject "Kagi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C756B042214FE7200DFB2F2 /* Debug */,
+				6C756B052214FE7200DFB2F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C756B062214FE7200DFB2F2 /* Build configuration list for PBXNativeTarget "Kagi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C756B072214FE7200DFB2F2 /* Debug */,
+				6C756B082214FE7200DFB2F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6C756AF72214FE7200DFB2F2 /* Project object */;
+}
