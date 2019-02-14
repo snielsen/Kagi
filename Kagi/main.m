@@ -55,6 +55,8 @@ int main( int argc, const char* argv[] )
         // Add a handler to respond to GET requests on any URL
         [webServer addDefaultHandlerForMethod:@"GET" requestClass:[GCDWebServerRequest class] processBlock: ^GCDWebServerResponse* (GCDWebServerRequest* request)
         {
+            GCDWebServerResponse* response = [GCDWebServerResponse responseWithStatusCode:404];
+
             if( [request.URL.path isEqualToString:@"/list"] )
             {
                 NSMutableDictionary* publicKeys = [NSMutableDictionary dictionary];
@@ -66,13 +68,15 @@ int main( int argc, const char* argv[] )
                     [publicKeys setObject:[[keyPair[ @"publickey" ] stringByReplacingOccurrencesOfString:@"/" withString:@"_"] stringByReplacingOccurrencesOfString:@"+" withString:@"-"] forKey:file];
                 }
 
-                return [GCDWebServerDataResponse responseWithJSONObject:publicKeys];
+                response = [GCDWebServerDataResponse responseWithJSONObject:publicKeys];
             }
             else if( [request.URL.path isEqualToString:@"/sign"] )
             {
                 NSString* publickey = request.query[@"publickey"];
                 if( publickey )
                 {
+                    BOOL foundKey = false;
+
                     publickey = [[publickey stringByReplacingOccurrencesOfString:@"-" withString:@"+"] stringByReplacingOccurrencesOfString:@"_" withString:@"/"];
 
                     for( NSString* file in keyPairs )
@@ -87,20 +91,23 @@ int main( int argc, const char* argv[] )
                                 NSData* signature = (NSData*)CFBridgingRelease( SecKeyCreateSignature( (__bridge SecKeyRef)(keyPair[ @"privatekey" ]), signingAlgorithm, (__bridge CFDataRef)[challengeString dataUsingEncoding:NSUTF8StringEncoding], nil ) );
                                 if( signature )
                                 {
-                                    return [GCDWebServerDataResponse responseWithJSONObject:@{ @"signature": [signature base64EncodedStringWithOptions:0] }];
+                                    response = [GCDWebServerDataResponse responseWithJSONObject:@{ @"signature": [signature base64EncodedStringWithOptions:0] }];
                                 }
-                                else{ return [GCDWebServerResponse responseWithStatusCode:500]; }
+                                else{ response = [GCDWebServerResponse responseWithStatusCode:500]; }
                             }
 
+                            foundKey = true;
                             break;
                         }
                     }
-                }
 
-                return [GCDWebServerResponse responseWithStatusCode:400];
+                    if( !foundKey ){ response = [GCDWebServerResponse responseWithStatusCode:404]; }
+                }
+                else{ response = [GCDWebServerResponse responseWithStatusCode:400]; }
             }
 
-            return [GCDWebServerResponse responseWithStatusCode:404];
+            [response setValue:@"*" forAdditionalHeader:@"Access-Control-Allow-Origin"];
+            return response;
         }];
 
         [webServer runWithPort:8080 bonjourName:nil];
