@@ -39,7 +39,7 @@ Next, the `Kagi` executable needs to be running. You can build `Apps/macOS/Kagi.
 
 Then when you visit a website that has Kagi support, logic using `Frontend/kagi.js` will contact `Kagi` and ask it to `/list` all the public keys it has available for authentication. The website's logic then takes that list and builds out UI allowing the user to either select an available key or use a legacy authentication method. 
 
-<img src="images/loginwindow.png" width="509" />
+<div style='text-align: center; margin-top: 10px; margin-bottom: 10px;'><img src="images/loginwindow.png" width="509" /></div>
 
 After the user selects one of the available keys, the website's frontend logic takes the selected public key and passes it to a backend server. The server backend takes the user's public key and creates a cryptographic challenge using logic such as `Backend/php/kagi.php`.  The generated challenge contains a timestamp, some random data and a hash of those values plus the provided public key and a secret only known to the server. The server then passes this challenge back to the frontend code running in the client's web browser. 
 
