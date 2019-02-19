@@ -38,10 +38,11 @@ int main( int argc, const char* argv[] )
                             SecKeyRef publickey = SecKeyCopyPublicKey( privatekey );
                             if( publickey )
                             {
-                                NSData* publicKeyBytes = (NSData*)CFBridgingRelease( SecKeyCopyExternalRepresentation( publickey, nil ) );
-                                if( publicKeyBytes )
+                                CFDataRef publickeyBytes;
+                                SecItemImportExportKeyParameters keyParams = { .version =  SEC_KEY_IMPORT_EXPORT_PARAMS_VERSION, .passphrase = @"" };
+                                if( SecItemExport( publickey, kSecFormatOpenSSL, 0, &keyParams, &publickeyBytes ) == 0 )
                                 {
-                                    [keyPairs setObject:@{ @"privatekey": (__bridge id _Nullable)(privatekey), @"publickey": [publicKeyBytes base64EncodedStringWithOptions:0] } forKey:file];
+                                    [keyPairs setObject:@{ @"privatekey": (__bridge id _Nullable)(privatekey), @"publickey": [(NSData*)CFBridgingRelease( publickeyBytes ) base64EncodedStringWithOptions:0] } forKey:file];
                                 }
                             }
                         }
@@ -65,7 +66,8 @@ int main( int argc, const char* argv[] )
                 {
                     NSDictionary* keyPair = keyPairs[ file ];
 
-                    [publicKeys setObject:[[keyPair[ @"publickey" ] stringByReplacingOccurrencesOfString:@"/" withString:@"_"] stringByReplacingOccurrencesOfString:@"+" withString:@"-"] forKey:file];
+//                    [publicKeys setObject:[[keyPair[ @"publickey" ] stringByReplacingOccurrencesOfString:@"/" withString:@"_"] stringByReplacingOccurrencesOfString:@"+" withString:@"-"] forKey:file];
+                    [publicKeys setObject:keyPair[ @"publickey" ] forKey:file];
                 }
 
                 response = [GCDWebServerDataResponse responseWithJSONObject:publicKeys];
@@ -77,7 +79,7 @@ int main( int argc, const char* argv[] )
                 {
                     BOOL foundKey = false;
 
-                    publickey = [[publickey stringByReplacingOccurrencesOfString:@"-" withString:@"+"] stringByReplacingOccurrencesOfString:@"_" withString:@"/"];
+//                    publickey = [[publickey stringByReplacingOccurrencesOfString:@"-" withString:@"+"] stringByReplacingOccurrencesOfString:@"_" withString:@"/"];
 
                     for( NSString* file in keyPairs )
                     {
@@ -88,10 +90,14 @@ int main( int argc, const char* argv[] )
                             NSString* challengeString = request.query[ @"challenge" ];
                             if( challengeString )
                             {
-                                NSData* signature = (NSData*)CFBridgingRelease( SecKeyCreateSignature( (__bridge SecKeyRef)(keyPair[ @"privatekey" ]), signingAlgorithm, (__bridge CFDataRef)[challengeString dataUsingEncoding:NSUTF8StringEncoding], nil ) );
+                                NSString* characters  = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY0123456789"; int charactersLength = (int)[characters length];
+                                NSMutableString* prefixString = [NSMutableString stringWithCapacity:128];
+                                for( int i = 0; i < 128; i++ ){ [prefixString appendFormat:@"%C", [characters characterAtIndex:arc4random_uniform( charactersLength )]]; }
+
+                                NSData* signature = (NSData*)CFBridgingRelease( SecKeyCreateSignature( (__bridge SecKeyRef)(keyPair[ @"privatekey" ]), signingAlgorithm, (__bridge CFDataRef)[[NSString stringWithFormat:@"%@_%@", prefixString, challengeString] dataUsingEncoding:NSUTF8StringEncoding], nil ) );
                                 if( signature )
                                 {
-                                    response = [GCDWebServerDataResponse responseWithJSONObject:@{ @"signature": [signature base64EncodedStringWithOptions:0] }];
+                                    response = [GCDWebServerDataResponse responseWithJSONObject:@{ @"publickey": publickey, @"prefix": prefixString, @"challenge": challengeString, @"signature": [signature base64EncodedStringWithOptions:0] }];
                                 }
                                 else{ response = [GCDWebServerResponse responseWithStatusCode:500]; }
                             }
@@ -110,7 +116,7 @@ int main( int argc, const char* argv[] )
             return response;
         }];
 
-        [webServer runWithPort:8080 bonjourName:nil];
+        [webServer runWithPort:18797 bonjourName:nil];
     }
     
     return 0;
