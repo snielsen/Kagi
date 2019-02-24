@@ -7,38 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C756B032214FE7200DFB2F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C756B022214FE7200DFB2F2 /* main.m */; };
-		6CEF3AED22150C2600CEAC8A /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AD522150C0F00CEAC8A /* GCDWebServerResponse.m */; };
-		6CEF3AEE22150C2600CEAC8A /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AD822150C0F00CEAC8A /* GCDWebServerErrorResponse.m */; };
-		6CEF3AEF22150C2600CEAC8A /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3ADD22150C0F00CEAC8A /* GCDWebServerRequest.m */; };
-		6CEF3AF022150C2600CEAC8A /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3ADE22150C0F00CEAC8A /* GCDWebServerURLEncodedFormRequest.m */; };
-		6CEF3AF122150C2600CEAC8A /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE022150C0F00CEAC8A /* GCDWebServerMultiPartFormRequest.m */; };
-		6CEF3AF222150C2600CEAC8A /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE222150C0F00CEAC8A /* GCDWebServerDataRequest.m */; };
-		6CEF3AF322150C2600CEAC8A /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE322150C0F00CEAC8A /* GCDWebServerFileResponse.m */; };
-		6CEF3AF422150C2600CEAC8A /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE422150C0F00CEAC8A /* GCDWebServerFunctions.m */; };
-		6CEF3AF522150C2600CEAC8A /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE522150C0F00CEAC8A /* GCDWebServer.m */; };
-		6CEF3AF622150C2600CEAC8A /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE622150C0F00CEAC8A /* GCDWebServerDataResponse.m */; };
-		6CEF3AF722150C2600CEAC8A /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE722150C0F00CEAC8A /* GCDWebServerConnection.m */; };
-		6CEF3AF822150C2600CEAC8A /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE822150C0F00CEAC8A /* GCDWebServerFileRequest.m */; };
-		6CEF3AF922150C2600CEAC8A /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AEA22150C0F00CEAC8A /* GCDWebServerStreamedResponse.m */; };
+		6C482CDD2221F153003A2B27 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C482CDB2221F153003A2B27 /* MainMenu.xib */; };
+		6C482CE52221F1DF003A2B27 /* GCDWebServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AD522150C0F00CEAC8A /* GCDWebServerResponse.m */; };
+		6C482CE62221F1DF003A2B27 /* GCDWebServerErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AD822150C0F00CEAC8A /* GCDWebServerErrorResponse.m */; };
+		6C482CE72221F1DF003A2B27 /* GCDWebServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3ADD22150C0F00CEAC8A /* GCDWebServerRequest.m */; };
+		6C482CE82221F1DF003A2B27 /* GCDWebServerURLEncodedFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3ADE22150C0F00CEAC8A /* GCDWebServerURLEncodedFormRequest.m */; };
+		6C482CE92221F1DF003A2B27 /* GCDWebServerMultiPartFormRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE022150C0F00CEAC8A /* GCDWebServerMultiPartFormRequest.m */; };
+		6C482CEA2221F1DF003A2B27 /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE222150C0F00CEAC8A /* GCDWebServerDataRequest.m */; };
+		6C482CEB2221F1DF003A2B27 /* GCDWebServerFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE322150C0F00CEAC8A /* GCDWebServerFileResponse.m */; };
+		6C482CEC2221F1DF003A2B27 /* GCDWebServerFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE422150C0F00CEAC8A /* GCDWebServerFunctions.m */; };
+		6C482CED2221F1DF003A2B27 /* GCDWebServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE522150C0F00CEAC8A /* GCDWebServer.m */; };
+		6C482CEE2221F1DF003A2B27 /* GCDWebServerDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE622150C0F00CEAC8A /* GCDWebServerDataResponse.m */; };
+		6C482CEF2221F1DF003A2B27 /* GCDWebServerConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE722150C0F00CEAC8A /* GCDWebServerConnection.m */; };
+		6C482CF02221F1DF003A2B27 /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AE822150C0F00CEAC8A /* GCDWebServerFileRequest.m */; };
+		6C482CF12221F1DF003A2B27 /* GCDWebServerStreamedResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CEF3AEA22150C0F00CEAC8A /* GCDWebServerStreamedResponse.m */; };
+		6C482CF22221F1DF003A2B27 /* KagiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCAD4E72221DAF100BA772B /* KagiDelegate.m */; };
+		6C482CF42221F1DF003A2B27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCAD4F22221DAF100BA772B /* main.m */; };
+		6C482CFA2221FC36003A2B27 /* KeyRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C482CF92221FC36003A2B27 /* KeyRowView.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		6C756AFD2214FE7200DFB2F2 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		6C756AFF2214FE7200DFB2F2 /* Kagi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Kagi; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C756B022214FE7200DFB2F2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6C756B092214FFEA00DFB2F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C482CD42221F151003A2B27 /* Kagi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kagi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C482CDC2221F153003A2B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6C482CF82221FC36003A2B27 /* KeyRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyRowView.h; sourceTree = "<group>"; };
+		6C482CF92221FC36003A2B27 /* KeyRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyRowView.m; sourceTree = "<group>"; };
+		6CCAD4E62221DAF100BA772B /* KagiDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KagiDelegate.h; sourceTree = "<group>"; };
+		6CCAD4E72221DAF100BA772B /* KagiDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KagiDelegate.m; sourceTree = "<group>"; };
+		6CCAD4EC2221DAF100BA772B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CCAD4F12221DAF100BA772B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CCAD4F22221DAF100BA772B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6CCAD4F42221DAF100BA772B /* Kagi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kagi.entitlements; sourceTree = "<group>"; };
 		6CEF3AD122150C0F00CEAC8A /* GCDWebServerFileResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerFileResponse.h; sourceTree = "<group>"; };
 		6CEF3AD222150C0F00CEAC8A /* GCDWebServerFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerFunctions.h; sourceTree = "<group>"; };
 		6CEF3AD322150C0F00CEAC8A /* GCDWebServerPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWebServerPrivate.h; sourceTree = "<group>"; };
@@ -70,7 +68,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6C756AFC2214FE7200DFB2F2 /* Frameworks */ = {
+		6C482CD12221F151003A2B27 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,11 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C482D002221FE36003A2B27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C482CDB2221F153003A2B27 /* MainMenu.xib */,
+				6CCAD4EC2221DAF100BA772B /* Assets.xcassets */,
+				6CCAD4F12221DAF100BA772B /* Info.plist */,
+				6CCAD4F42221DAF100BA772B /* Kagi.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		6C756AF62214FE7200DFB2F2 = {
 			isa = PBXGroup;
 			children = (
 				6CEF3AD022150C0F00CEAC8A /* GCDWebServer */,
-				6C756B012214FE7200DFB2F2 /* Kagi */,
+				6CCAD4E52221DAF100BA772B /* Kagi */,
 				6C756B002214FE7200DFB2F2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,16 +101,20 @@
 		6C756B002214FE7200DFB2F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C756AFF2214FE7200DFB2F2 /* Kagi */,
+				6C482CD42221F151003A2B27 /* Kagi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6C756B012214FE7200DFB2F2 /* Kagi */ = {
+		6CCAD4E52221DAF100BA772B /* Kagi */ = {
 			isa = PBXGroup;
 			children = (
-				6C756B092214FFEA00DFB2F2 /* Info.plist */,
-				6C756B022214FE7200DFB2F2 /* main.m */,
+				6CCAD4E62221DAF100BA772B /* KagiDelegate.h */,
+				6CCAD4E72221DAF100BA772B /* KagiDelegate.m */,
+				6C482CF82221FC36003A2B27 /* KeyRowView.h */,
+				6C482CF92221FC36003A2B27 /* KeyRowView.m */,
+				6CCAD4F22221DAF100BA772B /* main.m */,
+				6C482D002221FE36003A2B27 /* Resources */,
 			);
 			path = Kagi;
 			sourceTree = "<group>";
@@ -145,13 +158,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6C756AFE2214FE7200DFB2F2 /* Kagi */ = {
+		6C482CD32221F151003A2B27 /* Kagi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C756B062214FE7200DFB2F2 /* Build configuration list for PBXNativeTarget "Kagi" */;
+			buildConfigurationList = 6C482CE42221F153003A2B27 /* Build configuration list for PBXNativeTarget "Kagi" */;
 			buildPhases = (
-				6C756AFB2214FE7200DFB2F2 /* Sources */,
-				6C756AFC2214FE7200DFB2F2 /* Frameworks */,
-				6C756AFD2214FE7200DFB2F2 /* CopyFiles */,
+				6C482CD02221F151003A2B27 /* Sources */,
+				6C482CD12221F151003A2B27 /* Frameworks */,
+				6C482CD22221F151003A2B27 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -159,8 +172,8 @@
 			);
 			name = Kagi;
 			productName = Kagi;
-			productReference = 6C756AFF2214FE7200DFB2F2 /* Kagi */;
-			productType = "com.apple.product-type.tool";
+			productReference = 6C482CD42221F151003A2B27 /* Kagi.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -171,8 +184,13 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Aoren Software";
 				TargetAttributes = {
-					6C756AFE2214FE7200DFB2F2 = {
+					6C482CD32221F151003A2B27 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -182,42 +200,103 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 6C756AF62214FE7200DFB2F2;
 			productRefGroup = 6C756B002214FE7200DFB2F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6C756AFE2214FE7200DFB2F2 /* Kagi */,
+				6C482CD32221F151003A2B27 /* Kagi */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		6C482CD22221F151003A2B27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C482CDD2221F153003A2B27 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		6C756AFB2214FE7200DFB2F2 /* Sources */ = {
+		6C482CD02221F151003A2B27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CEF3AF622150C2600CEAC8A /* GCDWebServerDataResponse.m in Sources */,
-				6CEF3AF222150C2600CEAC8A /* GCDWebServerDataRequest.m in Sources */,
-				6CEF3AF722150C2600CEAC8A /* GCDWebServerConnection.m in Sources */,
-				6CEF3AEF22150C2600CEAC8A /* GCDWebServerRequest.m in Sources */,
-				6CEF3AF922150C2600CEAC8A /* GCDWebServerStreamedResponse.m in Sources */,
-				6CEF3AF122150C2600CEAC8A /* GCDWebServerMultiPartFormRequest.m in Sources */,
-				6CEF3AEE22150C2600CEAC8A /* GCDWebServerErrorResponse.m in Sources */,
-				6CEF3AF022150C2600CEAC8A /* GCDWebServerURLEncodedFormRequest.m in Sources */,
-				6CEF3AF422150C2600CEAC8A /* GCDWebServerFunctions.m in Sources */,
-				6CEF3AED22150C2600CEAC8A /* GCDWebServerResponse.m in Sources */,
-				6CEF3AF522150C2600CEAC8A /* GCDWebServer.m in Sources */,
-				6CEF3AF322150C2600CEAC8A /* GCDWebServerFileResponse.m in Sources */,
-				6CEF3AF822150C2600CEAC8A /* GCDWebServerFileRequest.m in Sources */,
-				6C756B032214FE7200DFB2F2 /* main.m in Sources */,
+				6C482CE62221F1DF003A2B27 /* GCDWebServerErrorResponse.m in Sources */,
+				6C482CE72221F1DF003A2B27 /* GCDWebServerRequest.m in Sources */,
+				6C482CEA2221F1DF003A2B27 /* GCDWebServerDataRequest.m in Sources */,
+				6C482CEB2221F1DF003A2B27 /* GCDWebServerFileResponse.m in Sources */,
+				6C482CF22221F1DF003A2B27 /* KagiDelegate.m in Sources */,
+				6C482CF42221F1DF003A2B27 /* main.m in Sources */,
+				6C482CE52221F1DF003A2B27 /* GCDWebServerResponse.m in Sources */,
+				6C482CED2221F1DF003A2B27 /* GCDWebServer.m in Sources */,
+				6C482CE82221F1DF003A2B27 /* GCDWebServerURLEncodedFormRequest.m in Sources */,
+				6C482CEE2221F1DF003A2B27 /* GCDWebServerDataResponse.m in Sources */,
+				6C482CF12221F1DF003A2B27 /* GCDWebServerStreamedResponse.m in Sources */,
+				6C482CF02221F1DF003A2B27 /* GCDWebServerFileRequest.m in Sources */,
+				6C482CEC2221F1DF003A2B27 /* GCDWebServerFunctions.m in Sources */,
+				6C482CE92221F1DF003A2B27 /* GCDWebServerMultiPartFormRequest.m in Sources */,
+				6C482CFA2221FC36003A2B27 /* KeyRowView.m in Sources */,
+				6C482CEF2221F1DF003A2B27 /* GCDWebServerConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		6C482CDB2221F153003A2B27 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6C482CDC2221F153003A2B27 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		6C482CE22221F153003A2B27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = W5PNVD5YEB;
+				INFOPLIST_FILE = Kagi/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aoren.Kagi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6C482CE32221F153003A2B27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = W5PNVD5YEB;
+				INFOPLIST_FILE = Kagi/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aoren.Kagi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		6C756B042214FE7200DFB2F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -329,47 +408,23 @@
 			};
 			name = Release;
 		};
-		6C756B072214FE7200DFB2F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				DEVELOPMENT_TEAM = W5PNVD5YEB;
-				INFOPLIST_FILE = "$(SRCROOT)/Kagi/Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = Kagi/GCDWebServer;
-			};
-			name = Debug;
-		};
-		6C756B082214FE7200DFB2F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				DEVELOPMENT_TEAM = W5PNVD5YEB;
-				INFOPLIST_FILE = "$(SRCROOT)/Kagi/Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = Kagi/GCDWebServer;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6C482CE42221F153003A2B27 /* Build configuration list for PBXNativeTarget "Kagi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C482CE22221F153003A2B27 /* Debug */,
+				6C482CE32221F153003A2B27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6C756AFA2214FE7200DFB2F2 /* Build configuration list for PBXProject "Kagi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C756B042214FE7200DFB2F2 /* Debug */,
 				6C756B052214FE7200DFB2F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6C756B062214FE7200DFB2F2 /* Build configuration list for PBXNativeTarget "Kagi" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6C756B072214FE7200DFB2F2 /* Debug */,
-				6C756B082214FE7200DFB2F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
