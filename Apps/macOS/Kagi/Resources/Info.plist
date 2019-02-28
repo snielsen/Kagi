@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SUFeedURL</key>
+	<string>https://kagiauth.com/Archives/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>YO6JSE/dYAKJugzwCkxkx2aJpPnrXB/xp3oEg7PfLt4=</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

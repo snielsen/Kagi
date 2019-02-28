@@ -24,13 +24,29 @@
 		6C482CF22221F1DF003A2B27 /* KagiDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCAD4E72221DAF100BA772B /* KagiDelegate.m */; };
 		6C482CF42221F1DF003A2B27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCAD4F22221DAF100BA772B /* main.m */; };
 		6C482CFA2221FC36003A2B27 /* KeyRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C482CF92221FC36003A2B27 /* KeyRowView.m */; };
+		6CA8769122277671000C9952 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA8769022277671000C9952 /* Sparkle.framework */; };
+		6CA87693222776BD000C9952 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CA8769022277671000C9952 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6CA87692222776A8000C9952 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6CA87693222776BD000C9952 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6C482CD42221F151003A2B27 /* Kagi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kagi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C482CDC2221F153003A2B27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6C482CF82221FC36003A2B27 /* KeyRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyRowView.h; sourceTree = "<group>"; };
 		6C482CF92221FC36003A2B27 /* KeyRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyRowView.m; sourceTree = "<group>"; };
+		6CA8769022277671000C9952 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		6CCAD4E62221DAF100BA772B /* KagiDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KagiDelegate.h; sourceTree = "<group>"; };
 		6CCAD4E72221DAF100BA772B /* KagiDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KagiDelegate.m; sourceTree = "<group>"; };
 		6CCAD4EC2221DAF100BA772B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CA8769122277671000C9952 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +123,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6CA8768F22277671000C9952 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CA8769022277671000C9952 /* Sparkle.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		6CCAD4E52221DAF100BA772B /* Kagi */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +140,7 @@
 				6C482CF92221FC36003A2B27 /* KeyRowView.m */,
 				6CCAD4F22221DAF100BA772B /* main.m */,
 				6C482D002221FE36003A2B27 /* Resources */,
+				6CA8768F22277671000C9952 /* Frameworks */,
 			);
 			path = Kagi;
 			sourceTree = "<group>";
@@ -165,6 +191,7 @@
 				6C482CD02221F151003A2B27 /* Sources */,
 				6C482CD12221F151003A2B27 /* Frameworks */,
 				6C482CD22221F151003A2B27 /* Resources */,
+				6CA87692222776A8000C9952 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -268,10 +295,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = W5PNVD5YEB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Kagi/Frameworks",
+				);
 				INFOPLIST_FILE = Kagi/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aoren.Kagi;
@@ -286,10 +318,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = W5PNVD5YEB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Kagi/Frameworks",
+				);
 				INFOPLIST_FILE = Kagi/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aoren.Kagi;
