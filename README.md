@@ -69,14 +69,18 @@ Don't see what you like? Help contribute!
 
 ## TODO
 
-* Convert the native executable so that it no longer runs under the user's privileges and instead runs unprivileged. Should instead ask the user to authenticate for specific privilege escalation every time a signing request comes in.
-* Let the user to specify which keys to expose. Right now it simply lists every sign-able RSA key. 
+* Ask the user every time a signing request comes in for permission.
 * Add support for password protected key files.
+* Add support for keys residing in the Keychain on macOS.
+* Record what resources have requested signing and prioritize that key the next time that source asks.
+* Shouldn't allow key exposure if permissions are too permissive (just like ssh).
+* Figure out a way to more gracefully prod to see if the port is open/responsive.
 * Flesh out more platform support.
 
 ## Built With
 
 * [GCDWebServer](https://github.com/swisspol/GCDWebServer) - macOS built-in web server
+* [Sparkle](https://sparkle-project.org) - macOS self-updater
 
 ## License
 

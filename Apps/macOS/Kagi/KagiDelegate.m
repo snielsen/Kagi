@@ -3,8 +3,63 @@
 #import <objc/runtime.h>
 
 #import "KeyRowView.h"
+#import "NewKeyRowView.h"
 
 @implementation KagiDelegate
+
+- (IBAction) createNewKey:(id)sender
+{
+    NSAlert* newKeyAlert = [[NSAlert alloc] init];
+
+    [newKeyAlert addButtonWithTitle:@"OK"];
+    [newKeyAlert addButtonWithTitle:@"Cancel"];
+    newKeyAlert.messageText = @"New Key File Name";
+    newKeyAlert.informativeText = @"Chose a descriptive name that reflects the identity or purpose of your new key.";
+
+        NSTextField* fileNameInput = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
+//        fileNameInput.stringValue = @"id_rsa";
+        [newKeyAlert.window setInitialFirstResponder:fileNameInput];
+
+    newKeyAlert.accessoryView = fileNameInput;
+
+    NSModalResponse response = [newKeyAlert runModal];
+
+    if( response == NSAlertFirstButtonReturn )
+    {
+        if( [[self.keyPairs allKeys] doesContain:fileNameInput.stringValue] )
+        {
+            NSAlert* alreadyExistsAlert = [[NSAlert alloc] init];
+            [alreadyExistsAlert setMessageText:[NSString stringWithFormat:@"Key \"%@\" already exists", fileNameInput.stringValue]];
+            [alreadyExistsAlert addButtonWithTitle:@"OK"];
+            [alreadyExistsAlert runModal];
+        }
+        else
+        {
+            CFErrorRef error = NULL;
+            SecKeyRef newPrivateKey = SecKeyCreateRandomKey( (__bridge CFDictionaryRef)@{ (id)kSecAttrKeyType: (id)kSecAttrKeyTypeRSA, (id)kSecAttrKeySizeInBits: @2048 }, &error );
+
+            CFDataRef privatekeyBytes;
+            SecItemImportExportKeyParameters keyParams = { .version = SEC_KEY_IMPORT_EXPORT_PARAMS_VERSION, .passphrase = @"" };
+            if( SecItemExport( newPrivateKey, kSecFormatOpenSSL, 0, &keyParams, &privatekeyBytes ) == 0 )
+            {
+                NSString* newKey = [(__bridge NSData*)privatekeyBytes base64EncodedStringWithOptions:0];
+
+                NSArray* chunks = [[NSRegularExpression regularExpressionWithPattern:@".{1,64}" options:0 error:nil] matchesInString:newKey options:0 range:NSMakeRange( 0, newKey.length )];
+                NSMutableString* lineBrokenKey = [NSMutableString string]; for( NSTextCheckingResult* chunk in chunks ){ [lineBrokenKey appendFormat:@"%@\n", [newKey substringWithRange: chunk.range]]; }
+
+                NSString* completeKey = [NSString stringWithFormat:@"-----BEGIN RSA PRIVATE KEY-----\n%@-----END RSA PRIVATE KEY-----", lineBrokenKey];
+
+                NSString* newKeyLocation = [NSString stringWithFormat:@"%@/%@", self.sshDirectory, fileNameInput.stringValue];
+
+                // Eventually write the key with restricted permissions from the get go to prevent rogue processes from trying to pick it up.
+                [completeKey writeToFile:newKeyLocation atomically:YES encoding:NSUTF8StringEncoding error:nil];
+                [[NSFileManager defaultManager] setAttributes:@{ NSFilePosixPermissions : [NSNumber numberWithShort:0600] } ofItemAtPath:newKeyLocation error:nil];
+
+                [self loadKeyPairs];
+            }
+        }
+    }
+}
 
 - (IBAction) keyExposedCheck:(NSButton*)sender
 {
@@ -19,34 +74,45 @@
     [self.defaults synchronize];
 }
 
-- (NSInteger) numberOfRowsInTableView:(NSTableView*)tableView { return [self.keyPairs count]; }
+- (NSInteger) numberOfRowsInTableView:(NSTableView*)tableView { return [self.keyPairs count] + 1; }
 
 - (NSView*) tableView:(NSTableView*)tableView viewForTableColumn:(NSTableColumn*)tableColumn row:(NSInteger)row
 {
-    KeyRowView* keyRow = [tableView makeViewWithIdentifier:@"CollectionKeyView" owner:self];
+    NSView* tableRow;
 
-    NSString* publickeyName = [[self.keyPairs allKeys] objectAtIndex:row];
-    NSDictionary* keyPair = self.keyPairs[ publickeyName ];
+    if( row < [self.keyPairs count] )
+    {
+        KeyRowView* keyRow = [tableView makeViewWithIdentifier:@"KeyRowView" owner:self];
 
-    keyRow.keyLabel.stringValue = publickeyName;
+        NSString* publickeyName = [[self.keyPairs allKeys] objectAtIndex:row];
+        NSDictionary* keyPair = self.keyPairs[ publickeyName ];
 
-    if( [keyPair[ @"exposed" ] isEqualTo:@(YES)] ){ keyRow.keyExposed.state = NSControlStateValueOn;  }
-                                              else{ keyRow.keyExposed.state = NSControlStateValueOff; }
+        keyRow.keyLabel.stringValue = publickeyName;
 
-    objc_setAssociatedObject( keyRow.keyExposed, @"publickeyName", publickeyName, OBJC_ASSOCIATION_RETAIN_NONATOMIC );
+        if( [keyPair[ @"exposed" ] isEqualTo:@(YES)] ){ keyRow.keyExposed.state = NSControlStateValueOn;  }
+                                                  else{ keyRow.keyExposed.state = NSControlStateValueOff; }
 
-    return keyRow;
+        objc_setAssociatedObject( keyRow.keyExposed, @"publickeyName", publickeyName, OBJC_ASSOCIATION_RETAIN_NONATOMIC );
+
+        tableRow = keyRow;
+    }
+    else
+    {
+        NewKeyRowView* newKeyRow = [tableView makeViewWithIdentifier:@"NewKeyRowView" owner:self];
+
+        tableRow = newKeyRow;
+    }
+
+    return tableRow;
 }
 
 - (void) loadKeyPairs
 {
     self.keyPairs = [NSMutableDictionary dictionary];
 
-    NSString* sshDirectory = [NSString stringWithFormat:@"%@/.ssh/", NSHomeDirectory()];
-
-    for( NSString* file in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:sshDirectory error:NULL] )
+    for( NSString* file in [[NSFileManager defaultManager] contentsOfDirectoryAtPath:self.sshDirectory error:NULL] )
     {
-        NSString* content = [NSString stringWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", sshDirectory, file] encoding:NSUTF8StringEncoding error:nil];
+        NSString* content = [NSString stringWithContentsOfFile:[NSString stringWithFormat:@"%@/%@", self.sshDirectory, file] encoding:NSUTF8StringEncoding error:nil];
         if( content )
         {
             NSMutableArray* lines = [NSMutableArray arrayWithArray:[content componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
@@ -70,7 +136,7 @@
                         if( publickey )
                         {
                             CFDataRef publickeyBytes;
-                            SecItemImportExportKeyParameters keyParams = { .version =  SEC_KEY_IMPORT_EXPORT_PARAMS_VERSION, .passphrase = @"" };
+                            SecItemImportExportKeyParameters keyParams = { .version = SEC_KEY_IMPORT_EXPORT_PARAMS_VERSION, .passphrase = @"" };
                             if( SecItemExport( publickey, kSecFormatOpenSSL, 0, &keyParams, &publickeyBytes ) == 0 )
                             {
                                 BOOL keyExposed = NO;
@@ -153,6 +219,7 @@
 {
     self.defaults         = [NSUserDefaults standardUserDefaults];
     self.signingAlgorithm = kSecKeyAlgorithmRSASignatureMessagePKCS1v15SHA512;
+    self.sshDirectory     = [NSString stringWithFormat:@"%@/.ssh/", NSHomeDirectory()];
 
     [self loadKeyPairs];
 

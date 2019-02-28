@@ -26,6 +26,7 @@
 		6C482CFA2221FC36003A2B27 /* KeyRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C482CF92221FC36003A2B27 /* KeyRowView.m */; };
 		6CA8769122277671000C9952 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA8769022277671000C9952 /* Sparkle.framework */; };
 		6CA87693222776BD000C9952 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6CA8769022277671000C9952 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6CA876962227863E000C9952 /* NewKeyRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA876952227863E000C9952 /* NewKeyRowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,8 @@
 		6C482CF82221FC36003A2B27 /* KeyRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyRowView.h; sourceTree = "<group>"; };
 		6C482CF92221FC36003A2B27 /* KeyRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyRowView.m; sourceTree = "<group>"; };
 		6CA8769022277671000C9952 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		6CA876942227863E000C9952 /* NewKeyRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewKeyRowView.h; sourceTree = "<group>"; };
+		6CA876952227863E000C9952 /* NewKeyRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewKeyRowView.m; sourceTree = "<group>"; };
 		6CCAD4E62221DAF100BA772B /* KagiDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KagiDelegate.h; sourceTree = "<group>"; };
 		6CCAD4E72221DAF100BA772B /* KagiDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KagiDelegate.m; sourceTree = "<group>"; };
 		6CCAD4EC2221DAF100BA772B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				6CCAD4E72221DAF100BA772B /* KagiDelegate.m */,
 				6C482CF82221FC36003A2B27 /* KeyRowView.h */,
 				6C482CF92221FC36003A2B27 /* KeyRowView.m */,
+				6CA876942227863E000C9952 /* NewKeyRowView.h */,
+				6CA876952227863E000C9952 /* NewKeyRowView.m */,
 				6CCAD4F22221DAF100BA772B /* main.m */,
 				6C482D002221FE36003A2B27 /* Resources */,
 				6CA8768F22277671000C9952 /* Frameworks */,
@@ -267,6 +272,7 @@
 				6C482CEE2221F1DF003A2B27 /* GCDWebServerDataResponse.m in Sources */,
 				6C482CF12221F1DF003A2B27 /* GCDWebServerStreamedResponse.m in Sources */,
 				6C482CF02221F1DF003A2B27 /* GCDWebServerFileRequest.m in Sources */,
+				6CA876962227863E000C9952 /* NewKeyRowView.m in Sources */,
 				6C482CEC2221F1DF003A2B27 /* GCDWebServerFunctions.m in Sources */,
 				6C482CE92221F1DF003A2B27 /* GCDWebServerMultiPartFormRequest.m in Sources */,
 				6C482CFA2221FC36003A2B27 /* KeyRowView.m in Sources */,

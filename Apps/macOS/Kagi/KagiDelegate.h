@@ -7,10 +7,14 @@
 
     @property NSUserDefaults*       defaults;
     @property SecKeyAlgorithm       signingAlgorithm;
+    @property NSString*             sshDirectory;
+
     @property NSMutableDictionary*  keyPairs;
     @property GCDWebServer*         webServer;
 
     @property IBOutlet NSWindow*    window;
     @property IBOutlet NSTableView* keysView;
+
+    - (IBAction) createNewKey:(id)sender;
 
 @end
