@@ -17,7 +17,7 @@
             $randomString = Kagi::random_str( 128 );
             $timestamp    = time();
 
-            return $time . "_" . $randomString . "_" . hash( "sha256", $timestamp . $randomString . $publickey . $secret );
+            return $timestamp . "_" . $randomString . "_" . hash( "sha256", $timestamp . $randomString . $publickey . $secret );
         }
 
         // Takes the login information and determines if the challenge data has been correctly signed by the private key, was produced by this server for the specified public key and is not expired.
@@ -31,15 +31,15 @@
 
             // Extract the parts out of the challenge.
             $parts = explode( '_', $challenge );
-            $timestamp      = $parts[0];
-            $randomString   = $parts[1];
-            $challengehHash = $parts[2];
+            $timestamp     = $parts[0];
+            $randomString  = $parts[1];
+            $challengeHash = $parts[2];
 
             // Ensure that this challenge is recent enough. Generated challenges expire after 30 seconds.
             if( $timestamp > strtotime( "-" . $expirySeconds . " seconds" ) )
             {
                 // Ensure that the hash in the challenge matches the one that only the server can generate using the timestamp, publickey, the given random data and a secret only the server knows.
-                if( $challengehHash == hash( "sha256", $timestamp . $randomString . $publickey . $secret ) )
+                if( $challengeHash == hash( "sha256", $timestamp . $randomString . $publickey . $secret ) )
                 {
                     // Construct the full challenge string which includes the prefix that the client generated and the challenge that the server created.
                     $fullChallenge = $prefix . "_" . $challenge;
